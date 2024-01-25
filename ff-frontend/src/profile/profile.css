@@ -1,0 +1,24 @@
+.profile{
+    display:flex;
+    flex-direction:column;
+    height:700px;
+    margin-top:150px;
+
+}
+.profile_sidebar{
+    width:100%;
+    border-right:rgb(207, 201, 201) 2px solid;
+    height:100%;
+}
+.profile_body{
+flex:100%;
+display:flex;
+flex-direction:column;
+justify-content: space-evenly;
+}
+.modal-show{
+    display:block;
+    position:fixed;
+    top:1px;
+    right:10px;
+}

@@ -1,0 +1,40 @@
+.suggested_user_profile {
+    margin:0px 10px 0px 10px;
+    height:70px;
+    width:70px;
+    border-radius:50%;
+    
+    border:rgb(117, 107, 107) 0.4px solid;
+    
+  
+}
+.suggested_user{
+    display:flex;
+    justify-content:space-evenly;
+    margin-top:15px;
+    
+}
+.suggestion_left img,.suggestion_left span{
+    cursor:pointer;
+}
+.suggestion_left{
+    flex:0.7;
+}
+.suggestion_left span{
+    position:relative;
+    top:-40px;
+}
+
+.suggestion_right{
+    flex:0.2;
+}
+.suggestion_right span{
+    position:relative;
+    top:18px;
+    cursor:pointer;
+    
+}
+.suggestion_right span a{
+    color:aqua;
+    text-decoration: none;
+}

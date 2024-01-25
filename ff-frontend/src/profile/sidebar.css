@@ -1,0 +1,78 @@
+.profile_sidebar{
+    display:flex;
+    flex-direction:column;
+
+}
+.profile_about{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    
+align-items:center;
+}
+.profile_about img{
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    margin: auto;
+}
+.profile_buttons,.profile_btn{
+width:50%;
+display:flex;
+justify-content:space-around;
+
+padding:20px;
+align-self: center;
+}
+.profile_bio{
+    width:100%;
+}
+.profile_network{
+width:100%;
+display:flex;
+flex-direction:row;
+justify-content: space-evenly;
+}
+.profile_number{
+    display:block;
+    font-weight: 800;
+    font-size:18px;
+    text-align: center;
+}
+.profile_buttons button{
+    width:130px;
+    height:40px;
+    margin-right:20px;
+    font-size: large;
+    font-weight:500;
+    border:2px black solid;
+    border-radius:8px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.profile_sidebar p{
+    text-align: center;
+}
+.profile-name{
+    font-size:20px;
+    margin-top:20px;
+    font-weight: 800;
+    margin-bottom:20px;
+}
+.profile_network span{
+    font-size:18px;
+    font-weight:500;
+}
+.follow-btn{
+    cursor:pointer;
+    background-color: rgb(40, 86, 235);
+    color:rgb(229, 231, 231);
+    text-align:center;
+    padding-top:10px;
+    width:130px;
+    height:30px;
+    margin-right:20px;
+    font-size: large;
+    font-weight:500;
+    border-radius:8px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

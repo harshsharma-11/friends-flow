@@ -1,0 +1,42 @@
+.suggestion{
+    color:white;
+    border-left:2px white solid;
+    width:20%;
+    height:88%;
+   top:80px;
+    position:fixed;
+    overflow-y: scroll;
+    border-radius:10px;
+     background-color: rgb(120, 120, 120);
+  
+    
+    
+    
+}
+::-webkit-scrollbar {
+    width: 0.1em; /* Set a very narrow scrollbar width */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Make the scrollbar thumb transparent */
+}
+ .suggestion_body{
+    display:flex;
+    flex-direction:column;
+    margin-left: 10px;
+} 
+.suggestions_title{
+    padding-left: 10px;
+   
+    z-index:2;
+    position: sticky;
+    margin-bottom: 10px;
+    top: 0;
+    
+    height:50px;
+    background-color: black;
+    
+font-size: 23px;
+
+
+}

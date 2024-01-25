@@ -1,0 +1,93 @@
+.profile_posts{
+    
+    width:300px;
+    height:300px;
+    border-radius:10px;
+   
+    margin-bottom:30px;
+    margin-left:30px;
+    position:relative;
+}
+.postprofile-img {
+    
+    width:100%;
+    height:100%;
+    border-radius:10px;
+    
+    margin-bottom:30px;
+    margin-left:30px;
+
+
+}
+.myposts-title{
+    width:100%;
+    height:28px;
+    font-size:25px;
+    font-weight:800;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align:center;
+    
+    margin-bottom:30px;
+}
+.myposts-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+    
+    margin-bottom:30px;
+}
+.three-dots{
+    width:35px;
+    height:30px;
+    
+    position:absolute;
+    right:-10px;
+    top:10px;
+    z-index:2;
+}
+
+
+.delete-container{
+    width:15vw;
+    height:7vw;
+    font-size:15px;
+background-color: rgb(85, 89, 89,0.8);
+display:flex;
+flex-direction:column;
+justify-content:space-evenly;
+align-items:center;
+position: absolute;
+border-radius:8px;
+color: azure;
+z-index:2;
+top:20px;
+right:0px;
+}
+.delete-cut{
+    width:3vw;
+    position:absolute;
+    top:10px;
+    right:0px;
+}
+.delete-cut img{
+    width:1.5vw;
+    height:1.5vw;
+}
+.delete-header{
+    width:60%;
+}
+.delete-footer button{
+width:4vw;
+height:2vw;
+margin-left:20px;
+border:2px black solid;
+border-radius:3px;
+
+font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.delete-cancel{
+    background-color: rgb(5, 83, 151);
+}
+.delete-logout{
+    background-color: rgb(201, 6, 6);
+}
