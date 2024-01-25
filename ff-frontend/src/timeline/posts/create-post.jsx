@@ -9,7 +9,20 @@ function CreatePost() {
   const [image,setImage]=useState("");
   const [body,setBody]=useState("");
   const [url,setUrl]=useState("");
-   const user=JSON.parse(localStorage.getItem('user')).username;
+  const [user,setUser]=useState('');
+  const navigate=useNavigate();
+  const token=localStorage.getItem("jwt");
+  useEffect(() => {
+    console.log('hello');
+
+    if (!token) {
+      navigate('/login');
+    }
+    else{
+      setUser(JSON.parse(localStorage.getItem('user')).username);
+    }
+  }, []); // Make sure to include the dependency array
+
   useEffect(()=>{
 
     const data=new FormData();
@@ -28,7 +41,7 @@ function CreatePost() {
   useEffect(()=>{
     console.log(url);
   },[url])
-const navigate=useNavigate();
+
   var loadFile = function(event) {
     var output = document.getElementById('output');
     output.src = URL.createObjectURL(event.target.files[0]);

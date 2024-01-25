@@ -5,12 +5,22 @@ import { useNavigate } from 'react-router-dom';
 
 function Suggestion() {
   const [users,setUser]=useState([]);
+const [current_user_id,setCurrentUserId]=useState('');
 
-const current_user_id=JSON.parse(localStorage.getItem('user'))._id;
-console.log(current_user_id);  
-
+const navigate=useNavigate();
+const token=localStorage.getItem("jwt");
  useEffect(() => {
+  console.log('hello');
+  
+  if (!token) {
+    navigate('/login');
+    return ;
+  }
+  else{
+setCurrentUserId(JSON.parse(localStorage.getItem('user'))._id);
+    console.log(current_user_id);  
   console.log("hey");
+
   fetch('/user/suggestion', {
     method: 'get',
     headers: {
@@ -28,6 +38,7 @@ console.log(current_user_id);
     console.log(data);
   })
   .catch(err => console.error(err));
+}
 }, []);
 
   return (

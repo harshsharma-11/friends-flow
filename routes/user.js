@@ -7,6 +7,7 @@ const loginRequired = require('../middlewares/loginrequired');
 
 router.get('/suggestion', loginRequired, (req, res) => {
     
+    console.log("helllo from suggestion");
     User.find({ followers: { $nin: [req.user._id] } })
         .then(result => {
             console.log("jdhbi");

@@ -5,19 +5,15 @@ import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 function Homepage(){
     const navigate=useNavigate();
-
- useEffect(async()=>{
-console.log('helo');
-
-const token = localStorage.getItem('jwt');
-
-if (!token) {
-  // Add a small delay to ensure the navigate function is called after the render
-  // This is to avoid any potential React state update issues
-  await new Promise((resolve) => setTimeout(resolve, 0));
-  navigate('/login');
-}
-}, []);
+    const token=localStorage.getItem("jwt");
+    useEffect(() => {
+      console.log('hello');
+  
+      if (!token) {
+        navigate('/login');
+      }
+    }, []); // Make sure to include the dependency array
+  
     return (
         <div className="homepage">
         

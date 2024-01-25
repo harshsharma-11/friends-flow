@@ -87,10 +87,10 @@ notifyWarning(data.message);
         <div className="website_name">FriendsFlow</div>
 <div className="signup_title">Sign up to FriendsFlow</div>
 
-{/* <div className="signup_other_methods">
-<button className="google_login"><img alt="google" src="https://cdn-icons-png.flaticon.com/128/281/281764.png"></img><span> Sign up with Google</span></button>
-<button className="facebook_login"><img src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png" alt="facebook"></img><span> Sign up with Facebook</span></button>
-</div> */}
+<div className="signup_other_methods">
+{/* <button className="google_login"><img alt="google" src="https://cdn-icons-png.flaticon.com/128/281/281764.png"></img><span> Sign up with Google</span></button> */}
+{/* <button className="facebook_login"><img src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png" alt="facebook"></img><span> Sign up with Facebook</span></button> */}
+</div>
 
 <div className="email_signup">
     {/* <p>---------------------------  or  ----------------------------</p> */}

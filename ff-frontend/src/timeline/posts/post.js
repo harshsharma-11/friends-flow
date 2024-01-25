@@ -7,7 +7,14 @@ function Posts() {
   const [posts, setPosts] = useState([]);
 const [comment,setComment]=useState('');
 
+const token=localStorage.getItem("jwt");
+const navigate=useNavigate();
 useEffect(()=>{
+  if (!token) {
+    navigate('/login');
+    return ;
+  }
+  else{
     fetch('/post/get-posts',{
     method:'get',
     headers:{
@@ -19,6 +26,7 @@ useEffect(()=>{
 })
   .catch(err=>console.log(err));
   }
+}
   ,[])
   
 
@@ -129,7 +137,6 @@ const handleCommentChange = (value, index) => {
   });
 };
 
-const navigate=useNavigate();
 const handleProfileClick=(userId)=>{
   navigate(`/user-profile/${userId}`);
 }

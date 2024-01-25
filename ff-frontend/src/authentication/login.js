@@ -127,8 +127,8 @@ console.log('google auht');
 <div className="login_title">Sign in to FriendsFlow</div>
 
 <div className="login_other_methods">
-<button className="google_login" onClick={handleGoogleAuth}><img alt="google" src="https://cdn-icons-png.flaticon.com/128/281/281764.png"></img><span> Sign in with Google</span></button>
-<button className="facebook_login"><img src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png" alt="facebook"></img><span> Sign in with Facebook</span></button>
+{/* <button className="google_login" onClick={handleGoogleAuth}><img alt="google" src="https://cdn-icons-png.flaticon.com/128/281/281764.png"></img><span> Sign in with Google</span></button> */}
+{/* <button className="facebook_login"><img src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png" alt="facebook"></img><span> Sign in with Facebook</span></button> */}
 </div>
 
 <div className="email_login">

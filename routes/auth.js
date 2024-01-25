@@ -7,7 +7,6 @@ const jwt=require("jsonwebtoken");
 const {jwt_secret}=require('../keys');
 router.post('/signup',async(req,res)=>{
     const {username,email,password}=req.body;
-    console.log("helllo");
     if(!username || !email || !password){
         //422 is source code that there are some problemsserver ye chiz samajh ni ayi
         return res.status(422).json({message:"please fill all the fields"});
@@ -57,6 +56,8 @@ console.log({token,user:{_id,username,email}});
 
 
 router.post('/signin',async(req,res)=>{
+    
+    console.log("helllo from signin");
     const {email,password}=req.body;
     if(!email || !password){
         return res.status(422).json({message:"Please fill all fields"});
