@@ -140,7 +140,7 @@ console.log('google auht');
     <input className="email_box_password" placeholder="Password" type="password" name="password" onChange={(e)=>{
       setUser({...user,password:e.target.value})
     }}></input>
-<button type="submit" onClick={postData} className="email_next_button">SignIn</button>
+<button  type="submit" onClick={postData} className="email_next_button">Log In</button>
 <button className="forgot_password_button">Forgot password?</button>
 
 </div>

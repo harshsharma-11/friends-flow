@@ -8,6 +8,7 @@ function Posts() {
 const [comment,setComment]=useState('');
 
 const token=localStorage.getItem("jwt");
+const user_id=JSON.parse(localStorage.getItem('user'))._id;
 const navigate=useNavigate();
 useEffect(()=>{
   if (!token) {
@@ -114,6 +115,34 @@ const handleComment=(id,comment,index)=>{
 }
 
 
+/************************************************ */
+const handleDeleteComment=(id,commentId,index)=>{
+  console.log('clicked');
+  fetch(`/post/delete-comment/${commentId}`,{
+    method:'delete',
+    headers:{"Content-Type":'application/json',
+    "Authorization":"Bearer "+localStorage.getItem('jwt')},
+    body:JSON.stringify({
+    postId:id,
+    
+    })
+      }
+    ).then(res=>res.json())
+    .then(result=>{
+      const new_posts=posts.map((post)=>{
+        if(post._id==result._id){
+  return result;
+        }
+        else{
+  return post;
+        }
+      })
+    
+    setPosts(new_posts);
+    })
+    .catch(err=>console.log(err));
+}
+
 /*************handling comment section show********** */
 const [showComments, setShowComments] = useState(Array(posts.length).fill(false));
 
@@ -203,6 +232,10 @@ const handleProfileClick=(userId)=>{
           
        { post.comments.map((comment)=>(
                       <div className="comment-ind">
+                       
+                        {comment.postedBy._id===user_id?
+                        (<div className='comment_ind_cut' onClick={()=>{handleDeleteComment(post._id,comment._id,index)}}>  <img onClick={()=>{handleCommentsShow(index)}} src="https://cdn-icons-png.flaticon.com/128/7630/7630214.png"></img></div>):(null)
+}
             <div className="comment-ind-details">{comment.postedBy.username}</div>
               <div className="comment-ind-body">  {comment.comment}</div> 
 

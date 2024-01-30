@@ -3,6 +3,7 @@ const router=express.Router();
 const mongoose=require('mongoose');
 const Post=require('../models/post')
 const loginRequired=require('../middlewares/loginrequired');
+
 router.post('/create-post',loginRequired,async(req,res)=>{
     console.log(req.body.body);
     const {pic,body}=req.body;
@@ -136,4 +137,29 @@ console.log(err);})
 
     })
 
+    
+    router.delete('/delete-comment/:commentId',loginRequired,(req,res)=>{
+        console.log('hello');
+        Post.findByIdAndUpdate(req.body.postId,{
+            
+            $pull:{comments:{ _id: req.params.commentId }}
+        },{
+            new:true
+        })
+        .populate('postedBy',"_id username profile_pic")
+        .populate("comments.postedBy","_id username")
+        .exec()
+        .then((result)=>{
+            console.log(result);
+            res.json(result);
+        })
+        .catch((err)=>{
+            
+            console.log(err);
+            res.status(422).json({error:err});
+        })
+        })
+    
+    
+    
 module.exports=router;

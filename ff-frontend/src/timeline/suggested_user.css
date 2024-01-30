@@ -12,6 +12,7 @@
     display:flex;
     justify-content:space-evenly;
     margin-top:15px;
+    margin-bottom:15px;
     
 }
 .suggestion_left img,.suggestion_left span{

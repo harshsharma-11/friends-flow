@@ -16,7 +16,7 @@
     
     border-radius:10px;
     padding :10px;
-    background-color: rgb(177, 177, 188);
+    background-color: #ffffff;
 }
 .post_image img{
 
@@ -177,6 +177,7 @@ padding-top:15px;
     /* border:1px solid black; */
     margin-bottom:20px;
     border-radius: 10px;;
+    position:relative;
 }
 .comment-ind-details{
     height:15px;
@@ -188,6 +189,10 @@ padding-top:15px;
 .comment-ind-body{
     color:rgb(49, 49, 48)
 }
+.comment-ind-body div img{
+    width:10px;
+    height:10px;
+}
 .show-comment-cancel{
     position: relative;
 }
@@ -198,6 +203,18 @@ position: absolute;
 right:10px;
 top:10px;
 cursor:pointer;
+}
+.comment_ind_cut{
+    width:25px;
+    height:25px;
+    position:absolute;
+right:10px;
+top:10px;
+cursor:pointer;
+}
+.comment_ind_cut img{
+    width:70%;
+    height:70%;
 }
 
 @media only screen and (max-width: 800px) {

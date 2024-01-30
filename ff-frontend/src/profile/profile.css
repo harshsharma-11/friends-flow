@@ -1,8 +1,10 @@
 .profile{
     display:flex;
     flex-direction:column;
-    height:700px;
-    margin-top:150px;
+  background-color: black;
+    margin-top:100px;
+padding-top: 30px;
+color:aliceblue;
 
 }
 .profile_sidebar{

@@ -1,15 +1,15 @@
 .suggestion{
-    color:white;
+    color:black;
     border-left:2px white solid;
     width:20%;
     height:88%;
-   top:80px;
+   top:120px;
     position:fixed;
     overflow-y: scroll;
     border-radius:10px;
-     background-color: rgb(120, 120, 120);
+     background-color:white;
   
-    
+    font-weight:600;
     
     
 }
@@ -26,13 +26,13 @@
     margin-left: 10px;
 } 
 .suggestions_title{
-    padding-left: 10px;
+    padding-left: 2vw;
    
     z-index:2;
     position: sticky;
     margin-bottom: 10px;
     top: 0;
-    
+    color:aliceblue;
     height:50px;
     background-color: black;
     
