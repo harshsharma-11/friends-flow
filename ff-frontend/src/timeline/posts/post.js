@@ -1,21 +1,32 @@
 import React from 'react'
 import "./post.css"
 import { useEffect,useState } from 'react';
-import { Navigate, useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 
 function Posts() {
   const [posts, setPosts] = useState([]);
+  const [user_id,setUser_id]=useState('');
 const [comment,setComment]=useState('');
+console.log("hello");
+const navigate = useNavigate();
+  const token = localStorage.getItem('jwt');
 
-const token=localStorage.getItem("jwt");
-const user_id=JSON.parse(localStorage.getItem('user'))._id;
-const navigate=useNavigate();
+  useEffect(() => {
+    console.log('helllllo');
+
+    if (!token) {
+      navigate('/login');
+    }
+  }, []);
+
+
 useEffect(()=>{
   if (!token) {
     navigate('/login');
     return ;
   }
   else{
+    setUser_id(JSON.parse(localStorage.getItem('user'))._id);
     fetch('/post/get-posts',{
     method:'get',
     headers:{

@@ -12,6 +12,7 @@ function CreatePost() {
   const [user,setUser]=useState('');
   const navigate=useNavigate();
   const token=localStorage.getItem("jwt");
+  
   useEffect(() => {
     console.log('hello');
 

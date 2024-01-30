@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import { toast } from 'react-toastify';
 import "./signup.css"
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 function Signup() {
 const [user,setUser]=useState({
@@ -13,9 +14,17 @@ const navigate=useNavigate();
 
 
 const token=localStorage.getItem("jwt");
-  if(token){
+  // if(token){
+  //     navigate('/');
+  // }
+  
+  useEffect(() => {
+
+    if (token) {
       navigate('/');
-  }
+    }
+    
+  }, []); // Make sure to include the dependency array
 
 const handlelogin=()=>{
   navigate('/login');

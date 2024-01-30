@@ -9,7 +9,7 @@
 }
 .post{
 
-    width:30vw;
+    width:25vw;
     margin-bottom: 30px;
     color:black;
     font-weight: 800;
@@ -20,8 +20,8 @@
 }
 .post_image img{
 
-    height:25vw;
-    width:28vw;
+    height:20vw;
+    width:23vw;
     margin:auto;
     margin-top: 10px;
     border-radius: 5px;
@@ -34,8 +34,8 @@
     flex:0.8;
 }
 .post_header_left img{
-    height:70px;
-    width:70px;
+    height:5vw;
+    width:5vw;
     border-radius:50%;
     border:0px #787a84 solid;
     
@@ -47,6 +47,7 @@
     top:-20px;
     left:5px;
     cursor:pointer;
+    font-size:1.5vw;
 }
 .post_header_left #time{
     margin-left:12px;
@@ -87,9 +88,9 @@
     cursor:pointer;
 }
 .post_lefticons img{
-height:35px;
+height:3.1vw;
 margin:5px 10px -20px 5px;
-width:35px;
+width:3.1vw;
 cursor:pointer;
 }
 .footer_icons{
@@ -98,12 +99,12 @@ cursor:pointer;
 }
 .add-comment input{
     width:70%;
-    height:20px;
+    height:1.6vw;
     padding:2px;
     
 }
 .add-comment button{
-    width:15%;
+    width:22%;
     justify-content: space-evenly;
     margin-left:5px;
     border-radius:5px;
@@ -115,19 +116,21 @@ cursor:pointer;
     width:100%;
 }
 .add-comment img{
-    height:25px;
+    height:2vw;
     margin-right:3px;
-    width:25px;
+    width:2vw;
     cursor:pointer;
     }
     .caption{
         font-weight: 500;
         margin-bottom:10px;
+        font-size:1.3vw;
     }
     .likes-count{
         font-weight:900;
         margin-bottom:10px;
         margin-top:-10px;
+        font-size:1.2vw;
     }
     .like-icon{
 cursor:pointer;
@@ -136,6 +139,7 @@ cursor:pointer;
         color:rgb(91, 91, 89);
         font-weight:600;
         cursor:pointer;
+        font-size:1.2vw;
         
     }
     .show-comment-container{
@@ -237,4 +241,60 @@ cursor:pointer;
             top:5px;
            
             }
+            .likes-count,.view-comments,.post_header_left span{
+                font-size:2.1vw;
+            }
+           .caption{
+            font-size:2vw;
+           }
+           .add-comment button ,.add-comment input{
+            font-size:2vw;
+           }
+  }
+  
+@media only screen and (max-width: 500px) {
+    .post{
+        width:50vw;
+       
+       
+        
+    }
+    .post_image img {
+        width:48vw;
+        height:35vw;
+    }
+.footer_icons{
+    height:10vw;
+}
+
+
+
+    .post_header_left img{
+        height:10vw;
+        width:10vw;
+        
+    }
+    .comment-section-header{
+        font-size:3vw;
+        font-weight:600;
+        
+        
+        }
+        .show-comment-cancel img{
+            width: 3vw;
+            height:3vw;
+            
+            right:5px;
+            top:5px;
+           
+            }
+            .likes-count,.view-comments,.post_header_left span{
+                font-size:2.1vw;
+            }
+           .caption{
+            font-size:2vw;
+           }
+           .add-comment button ,.add-comment input{
+            font-size:2vw;
+           }
   }

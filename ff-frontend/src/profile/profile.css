@@ -24,3 +24,8 @@ justify-content: space-evenly;
     top:1px;
     right:10px;
 }
+
+
+@media only screen and (max-width: 800px) {
+    
+}

@@ -73,3 +73,102 @@ align-items:center;
 position: relative;
 border-radius:8px;
 }
+
+
+
+.modal-container-logout{
+    margin-top:100px;
+    width:35vw;
+    height:25vw;
+background-color: rgb(217, 221, 221,0.8);
+display:flex;
+flex-direction:column;
+justify-content:space-evenly;
+align-items:center;
+position: relative;
+border-radius:8px;
+}
+.modal-header-logout{
+
+    width:60%;
+    font-size:1.5vw;
+    font-weight:700;
+
+}
+.modal-footer-logout button{
+
+    width:10vw;
+    height:3vw;
+    margin-left:20px;
+    border:2px black solid;
+    border-radius:3px;
+    font-weight:700;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size:1vw;
+}
+@media only screen and (max-width: 800px) {
+    .modal-header{
+        font-size:4vw;
+    }
+    .modal-footer button{
+        font-size:2vw;
+        height:4vw;
+        width:15vw;
+    }
+    .modal-container-update{
+        height:35vw;
+        width:65vw;
+    }
+}
+@media only screen and (max-width: 500px){
+    .modal-header{
+        font-size:4vw;
+    }
+    .modal-footer button{
+     
+        height: 6vw;
+        font-size: 3vw;
+        width: 20vw;
+    }
+    .modal-container-update{
+        height:65vw;
+        width:65vw;
+    }
+    .post-preview-update{
+        width:40vw;
+        height:20vw;
+    }
+    .modal-cut-update img {
+        height: 5vw;
+        width: 5vw;
+    }
+    .create-post-select input {
+     
+        font-size: 2.5vw;
+    }
+}
+
+
+@media only screen and (max-width: 670px){
+
+
+
+.modal-container-logout{
+width:80vw;
+height:40vw;
+}
+    .modal-header-logout{
+    
+        width:60%;
+        font-size:3.5vw;
+        font-weight:700;
+    
+    }
+    .modal-footer-logout button{
+    
+    height: 5vw;
+    margin-left: 20px;
+    width: 15vw;
+    font-size:2vw;
+    }
+}

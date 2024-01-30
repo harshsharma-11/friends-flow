@@ -3,9 +3,19 @@ import "./timeline.css"
 import Suggestion from "./suggestion.js"
 import Post from "./posts/post"
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 function Timeline() {
 
+  const navigate = useNavigate();
+  const token = localStorage.getItem('jwt');
 
+  useEffect(() => {
+    console.log('hello');
+
+    if (!token) {
+      navigate('/login');
+    }
+  }, []);
 
   return (
     <div className="timeline">

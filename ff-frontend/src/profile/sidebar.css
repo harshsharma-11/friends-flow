@@ -76,3 +76,32 @@ justify-content: space-evenly;
     border-radius:8px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+@media only screen and (max-width: 600px) {
+    
+    .profile_about img{
+        width:22vw;
+        height:22vw;
+    }
+    .profile_network span{
+        font-size:3.8vw;
+    }
+    .follow-btn{
+        font-size:3.7vw;
+        padding:1.2vw;
+        width:15vw;
+        border-radius: 0.8vw;
+        height: auto;
+    }
+    .profile_buttons button{
+        font-size:3.7vw;
+        padding:1.2vw;
+        width:15vw;
+        border-radius: 0.8vw;
+        height: auto;
+    }
+    .profile-name{
+        font-size: 4.5vw;
+    }
+   
+}

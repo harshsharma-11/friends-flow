@@ -26,17 +26,24 @@
     margin-left: 10px;
 } 
 .suggestions_title{
-    padding-left: 2vw;
-   
+    padding:0.5vw;
+   text-align:center;
     z-index:2;
     position: sticky;
     margin-bottom: 10px;
     top: 0;
     color:aliceblue;
-    height:50px;
+   
     background-color: black;
     
-font-size: 23px;
+font-size: 2.3vw;
 
 
+}
+
+@media only screen and (max-width: 500px) {
+    .suggestion{
+        width:30vw;
+        height:68%;
+    }
 }

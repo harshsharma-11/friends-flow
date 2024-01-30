@@ -1,7 +1,7 @@
 .suggested_user_profile {
     margin:0px 10px 0px 10px;
-    height:70px;
-    width:70px;
+    height:5vw;
+    width:5vw;
     border-radius:50%;
     
     border:rgb(117, 107, 107) 0.4px solid;
@@ -10,20 +10,20 @@
 }
 .suggested_user{
     display:flex;
-    justify-content:space-evenly;
+    justify-content:space-between;
     margin-top:15px;
     margin-bottom:15px;
+    padding-right: 1vw;
     
 }
 .suggestion_left img,.suggestion_left span{
     cursor:pointer;
 }
-.suggestion_left{
-    flex:0.7;
-}
+
 .suggestion_left span{
     position:relative;
     top:-40px;
+    font-size:1.3vw;
 }
 
 .suggestion_right{
@@ -38,4 +38,34 @@
 .suggestion_right span a{
     color:aqua;
     text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .suggestion{
+        width:30vw;
+    }
+    .suggestion_left span{
+        position:relative;
+        top:-40px;
+        font-size:2.8vw;
+    }
+    .suggested_user_profile{
+        height:10vw;
+        width:10vw;
+    }
+    .suggestion_right span {
+        
+        font-size: 2.5vw;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .suggestion_left span{
+        position:relative;
+        top:-40px;
+        font-size:2.3vw;
+    }
+    .suggested_user_profile{
+        height:8vw;
+        width:8vw;
+    }
 }

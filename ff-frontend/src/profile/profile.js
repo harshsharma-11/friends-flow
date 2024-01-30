@@ -214,10 +214,10 @@ const DeletePost=(postId,index)=>{
   }
   return (
     <>
-    {modal_show?(<div className="modal-show"><div className="modal-container">
+    {modal_show?(<div className="modal-show"><div className="modal-container-logout">
         <div className="modal-cut" onClick={()=>{setModal_show(false)}}><img src="https://cdn-icons-png.flaticon.com/128/10165/10165395.png"></img></div>
-        <div className="modal-header">Are you sure you want to LogOut</div>
-        <div className="modal-footer">
+        <div className="modal-header-logout">Are you sure you want to LogOut</div>
+        <div className="modal-footer-logout">
             <button className="modal-logout" onClick={LogoutUser} >LogOut</button>
             <button onClick={()=>{setModal_show(false)}} className="modal-cancel">Cancel</button>
         </div>

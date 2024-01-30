@@ -32,6 +32,7 @@ padding:10px 0 10px 0;
     height:10%;
  border-bottom:1px rgb(243, 243, 243) solid;
     display:flex;
+    color:white;
 }
 .create-post-user{
     height:100%;
@@ -126,3 +127,74 @@ overflow: hidden;
 
     border-radius:50%;
 }
+
+
+@media only screen and (max-width: 1000px) {
+.create-post-caption textarea{
+    width:40vw;
+    height:4vw;
+}
+.create-post-container{
+    width:80vw;
+    height:42vw;
+}
+.create-post-heading{
+    font-size:2.8vw;
+}
+}
+@media only screen and (max-width: 640px) {
+    .create-post-caption textarea{
+        width:40vw;
+        height:4vw;
+        font-size:2.5vw
+    }
+    .create-post-container{
+        width:80vw;
+        height:62vw;
+    }
+    .create-post-heading{
+        font-size:2.8vw;
+    }
+    .create-post-user-name{
+        font-size:2.8vw;
+        padding-left: 0.5vw;
+    }
+    .create-post-user-image {
+        border-radius: 50%;
+        height: 8vw;
+        padding: 10px 0 10px 10px;
+        width: 8vw;
+    }
+    }
+
+    
+@media only screen and (max-width: 400px) {
+    .create-post-caption textarea{
+        width:40vw;
+        height:4vw;
+        font-size:2.5vw
+    }
+    .create-post-container{
+        width:80vw;
+        height:82vw;
+    }
+    .create-post-heading {
+        font-size: 3.8vw;
+        padding-top: 1vw;
+    }
+    .create-post-user-name{
+        font-size:2.8vw;
+        padding-left: 0.5vw;
+    }
+    
+.create-post-user-image{
+    width:10vw;
+    height:10vw;
+}
+.create-post-share div{
+    font-size:3vw;
+}
+    }
+    
+    
+
