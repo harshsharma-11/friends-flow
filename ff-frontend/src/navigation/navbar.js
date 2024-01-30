@@ -43,16 +43,16 @@ function Navbar() {
     </div>
   {token? ( 
     <div className="navbar-right">
-<div onClick={handle_home} className="home_icon"><img alt="home"src="https://cdn-icons-png.flaticon.com/128/861/861435.png"></img><span>Home</span></div>
-<div onClick={handle_create} className="create-post_icon"><img alt="reels" src="https://cdn-icons-png.flaticon.com/128/4511/4511814.png"></img><span>Create Post</span></div>
+<div onClick={handle_home} className="home_icon"><img alt="home"src="https://cdn-icons-png.flaticon.com/128/861/861435.png"></img><div className='nav-icon-name'>Home</div></div>
+<div onClick={handle_create} className="create-post_icon"><img alt="reels" src="https://cdn-icons-png.flaticon.com/128/4511/4511814.png"></img><div className='nav-icon-name'>Create Post</div></div>
 {/* <div onClick={handle_search} className="search_icon"><img alt="search" src="https://cdn-icons-png.flaticon.com/128/10947/10947920.png"></img><span>Search</span></div> */}
-<div onClick={handle_profile} className="setting_icon"><img alt="settings" src="https://cdn-icons-png.flaticon.com/128/7710/7710521.png"></img><span>Profile</span></div>
+<div onClick={handle_profile} className="setting_icon"><img alt="settings" src="https://cdn-icons-png.flaticon.com/128/7710/7710521.png"></img><div className='nav-icon-name'>Profile</div></div>
 {/* <div onClick={handle_message} className="message_icon"><img alt="messages" src="https://cdn-icons-png.flaticon.com/128/1409/1409939.png"></img><span>Messages</span></div> */}
 </div> ):
   (
     <div className="navbar-right">
-    <div onClick={handle_login} className="home_icon"><img alt="login"src="https://cdn-icons-png.flaticon.com/128/4844/4844163.png"></img><span>Login</span></div>
-<div onClick={handle_signup} className="create-post_icon"><img alt="signup" src="https://cdn-icons-png.flaticon.com/128/13079/13079071.png"></img><span>Signup</span></div>
+    <div onClick={handle_login} className="home_icon"><img alt="login"src="https://cdn-icons-png.flaticon.com/128/4844/4844163.png"></img>< div className='nav-icon-name'>Login</div></div>
+<div onClick={handle_signup} className="create-post_icon"><img alt="signup" src="https://cdn-icons-png.flaticon.com/128/13079/13079071.png"></img><div className='nav-icon-name'>Signup</div></div>
 </div>
   )}
     

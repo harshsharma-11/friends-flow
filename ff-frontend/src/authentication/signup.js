@@ -84,7 +84,7 @@ notifyWarning(data.message);
   return (
     <div  className="signup">
 
-        <div className="website_name">FriendsFlow</div>
+        <div className="signup_website_name">FriendsFlow</div>
 <div className="signup_title">Sign up to FriendsFlow</div>
 
 <div className="signup_other_methods">
@@ -94,17 +94,17 @@ notifyWarning(data.message);
 
 <div className="email_signup">
     {/* <p>---------------------------  or  ----------------------------</p> */}
-    <input className="email_box" placeholder="Email" type="email" name="email" onChange={(e)=>{
+    <input className="signup_email_box" placeholder="Email" type="email" name="email" onChange={(e)=>{
       setUser({...user,email:e.target.value})
     }}></input>
     
-    <input className="email_box_password" placeholder="Username" type="text"  name="username"  onChange={(e)=>{
+    <input className="signup_email_box_password" placeholder="Username" type="text"  name="username"  onChange={(e)=>{
       setUser({...user,username:e.target.value})
     }}></input>
     <input className="email_box_confirm_password" placeholder=" Password" type="password" name="password" onChange={(e)=>{
       setUser({...user,password:e.target.value})
     }}></input>
-<button type="submit" onClick={postData}className="email_next_button">SignUp</button>
+<button type="submit" onClick={postData}className="signup_email_next_button">SignUp</button>
 
 </div>
 

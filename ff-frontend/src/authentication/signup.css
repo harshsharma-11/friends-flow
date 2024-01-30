@@ -10,11 +10,12 @@
     border-radius: 10px;
     margin-top:150px;
 }
-.website_name{
+.signup_website_name{
     
     height:30%;
     margin: auto;
     font-size:50px;
+    color:aliceblue;
     }
     .signup_title{
         
@@ -55,10 +56,11 @@
     border: none;
     border-radius:20px;
      }
-     .email_box{
-        width:330px;
-        height:58px;
-        margin:auto;  
+     .signup_email_box,.signup_email_box_password{
+        width:22vw;
+    height:4vw;
+        margin:auto; 
+        margin-top:2vw; 
         text-align: center;
         background-color: rgba(98, 97, 95, 0.12);
         border: 0.5px solid white;
@@ -68,50 +70,38 @@
     
      }
      .email_box_confirm_password{
-        width:330px;
-        height:48px;
+        width:22vw;
+        height:4vw;
         margin:auto;  
         text-align: center;
         background-color: rgba(98, 97, 95, 0.12);
         border: 0.5px solid white;
         border-radius:7px;
         color:azure;
-        font-size: 20px;
+        
+    font-size: 1.5vw;
         margin-top:10px;
         margin-bottom:10px;
     
      }
      
-     .email_box_password{
-        width:330px;
-        height:48px;
-        
-        margin:auto;  
-        text-align: center;
-        background-color: rgba(98, 97, 95, 0.12);
-        border: 0.5px solid white;
-        border-radius:7px;
-        color:azure;
-        font-size: 20px;
-        
-        margin-top:10px;
-    
-     }
+     
+     
      
      
     .forgot_password_button{
-        width:340px;
-    height:40px;
+        width:22vw;
+        height:4vw;
         border-radius:20px;
         margin:auto;  
         border: none;
         border-radius:20px;
         background-color: rgb(12, 11, 11);
         font-size: 15px;
-        font-weight: 700;
+        
         color:azure;
     }
-    .email_next_button{
+    .signup_email_next_button{
         width:340px;
     height:40px;
         margin:auto;  
@@ -121,10 +111,10 @@
         font-weight: 700;
     }
     .no_account{
-        flex:0.1;
+       
         text-align: center;
         margin-top: 40px;
-        font-size: 20px;
+        font-size: 1.5vw;
         cursor:pointer;
     }
     
@@ -139,4 +129,90 @@
     
     margin-right: 10px;
     font-weight: 800;
+    }
+
+    
+    @media only screen and (max-width: 1200px) {
+.signup_website_name{
+    margin-top:5vw;
+}
+    }
+    @media only screen and (max-width: 800px) {
+        .signup{
+            width:70vw;
+            height:70vw;
+        }
+        .signup_website_name{
+            font-size:5vw;
+        }
+        .signup_title{
+            font-size:3.5vw;
+        }
+       .signup_email_box,.email_box_confirm_password, .signup_email_box_password{
+            
+            font-size:3.3vw;
+            width: 40vw;
+            height:7vw;
+        }
+        
+        .no_account{
+            font-size:3vw;
+        }
+        .signup_email_next_button{
+            width:25vw;
+            height:5vw;
+            font-size:2.0vw;
+        }
+        .forgot_password_button{
+            width:35vw;
+            height:5vw;
+            font-size:2.2vw;
+            font-weight:500;
+        }
+        
+    }
+
+    @media only screen and (max-width: 570px) {
+        .signup{
+            width:90vw;
+            height:85vw;
+        }
+        .signup_website_name{
+            font-size:7vw;
+        }
+        .signup_title{
+            font-size:4.5vw;
+        }
+        .signup_email_box{
+            width: 40vw;
+            height:10vw;
+            font-size:4.3vw;
+        }
+        .signup_email_box_password{
+            
+            font-size:4.3vw;
+            width: 40vw;
+            height:10vw;
+        }
+        .email_box_confirm_password{
+            font-size:4.3vw;
+            width: 40vw;
+            height:10vw;
+        }
+        .no_account{
+            font-size:5vw;
+        }
+        .signup_email_next_button{
+            width:25vw;
+            height:7vw;
+            font-size:3.5vw;
+        }
+        .forgot_password_button{
+            width:35vw;
+            height:7vw;
+            font-size:3.1vw;
+            font-weight:500;
+        }
+        
+        
     }
