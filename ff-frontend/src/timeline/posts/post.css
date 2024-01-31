@@ -89,7 +89,7 @@
 }
 .post_lefticons img{
 height:3.1vw;
-margin:5px 10px -20px 5px;
+margin:5px 10px 20px 5px;
 width:3.1vw;
 cursor:pointer;
 }
@@ -255,21 +255,30 @@ cursor:pointer;
   
   
 @media only screen and (max-width: 500px) {
+    .post-box{
+        width:100vw;
+        flex-direction:column;
+    }
     .post{
-        width:50vw;
+        width:80vw;
        
        
         
     }
     .post_image img {
-        width:48vw;
-        height:35vw;
+        width:78vw;
+        height:55vw;
     }
 .footer_icons{
     height:10vw;
 }
-
-
+.comment-ind{
+    width: 70vw;
+    font-size: 4vw;
+}
+.comment-ind-details{
+    font-size:5vw;
+}
 
     .post_header_left img{
         height:10vw;
@@ -277,9 +286,9 @@ cursor:pointer;
         
     }
     .comment-section-header{
-        font-size:3vw;
+        font-size: 7vw;
+        margin-bottom: 4vw;
         font-weight:600;
-        
         
         }
         .show-comment-cancel img{
@@ -291,13 +300,40 @@ cursor:pointer;
            
             }
             .likes-count,.view-comments,.post_header_left span{
-                font-size:2.1vw;
+                font-size: 4.1vw;
+                margin-top:0px;
             }
            .caption{
-            font-size:2vw;
+            font-size:3.4vw;
            }
-           .add-comment button ,.add-comment input{
-            font-size:2vw;
+           
+           .post_lefticons img{
+            width: 7vw;
+            height:7vw;
            }
+           .add-comment input {
+            height: 4.6vw;
+            padding: 2px;
+            width: 70%;
+            font-size:3.4vw;
+        }
+        .add-comment button{
+            font-size: 3.4vw;;
+        }
+        .add-comment img {
+            cursor: pointer;
+            height: 5vw;
+            margin-right: 3px;
+            width: 5vw;
+        }
+        .show-comment-container{
+            margin-left: 0px;
+    width: 80vw;
+    height: 80vw;
+        }
+        .show-comment-cancel img{
+            width:5vw;
+            height:5vw;
+        }
   }
 
