@@ -1,7 +1,7 @@
 .signup{
     background-color:rgb(57, 70, 81);
-    height:550px;
-    width:550px;
+    height:30vw;
+    width:30vw;
     margin: auto;
     margin-top:50px;
     display:flex;
@@ -11,17 +11,15 @@
     margin-top:150px;
 }
 .signup_website_name{
-    
-    height:30%;
     margin: auto;
-    font-size:50px;
+    font-size:3vw;
     color:aliceblue;
     }
     .signup_title{
         
         margin: auto;
     color:white;
-        font-size:30px;
+        font-size:2vw;
     }
     .signup_other_methods{
         
@@ -30,7 +28,6 @@
         justify-content:space-around;
     }
     .email_signup{
-        flex:0.42;
         display:flex;
         flex-direction:column;
         text-align: center;
@@ -102,8 +99,8 @@
         color:azure;
     }
     .signup_email_next_button{
-        width:340px;
-    height:40px;
+        width:18vw;;
+    height:3vw;
         margin:auto;  
         border: none;
         border-radius:20px;
@@ -175,18 +172,24 @@
     @media only screen and (max-width: 570px) {
         .signup{
             width:90vw;
-            height:85vw;
+            height:105vw;
         }
         .signup_website_name{
-            font-size:7vw;
+            font-size:9vw;
         }
         .signup_title{
-            font-size:4.5vw;
+            font-size:5.5vw;
         }
         .signup_email_box{
             width: 40vw;
             height:10vw;
             font-size:4.3vw;
+        }
+        .email_signup{height:50vw;
+            display:flex;
+            flex-direction:column;
+            text-align: center;
+            justify-content:space-around;
         }
         .signup_email_box_password{
             

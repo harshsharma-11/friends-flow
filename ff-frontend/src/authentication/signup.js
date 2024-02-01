@@ -4,10 +4,10 @@ import { toast } from 'react-toastify';
 import "./signup.css"
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 function Signup() {
 const [user,setUser]=useState({
 username:"",
-email:"",
 password:"",
 })
 const navigate=useNavigate();
@@ -37,18 +37,11 @@ const notifyWarning=(msg)=>{
 }
 
 
-
-const emailRegex=/^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/;
 const passRegex= /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/;
+const {email}=useParams();
 const postData = () => {
-  // Sending data to the server
 
-
-if(!emailRegex.test(user.email)){
-  notifyError("Not a valid email");
-  return;
-}
-else if(!passRegex.test(user.password)){
+ if(!passRegex.test(user.password)){
   notifyWarning("Password should contain min of 8 digits with atleast 1 uppercase,1 lowercase,1 special character(&,@,#) and 1 numberic character");
   return;
 }
@@ -59,7 +52,7 @@ else if(!passRegex.test(user.password)){
     },
     body: JSON.stringify({
       username:user.username,
-      email:user.email,
+      email:email,
       password:user.password,
     }),
   })
@@ -96,16 +89,9 @@ notifyWarning(data.message);
         <div className="signup_website_name">FriendsFlow</div>
 <div className="signup_title">Sign up to FriendsFlow</div>
 
-<div className="signup_other_methods">
-{/* <button className="google_login"><img alt="google" src="https://cdn-icons-png.flaticon.com/128/281/281764.png"></img><span> Sign up with Google</span></button> */}
-{/* <button className="facebook_login"><img src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png" alt="facebook"></img><span> Sign up with Facebook</span></button> */}
-</div>
 
 <div className="email_signup">
-    {/* <p>---------------------------  or  ----------------------------</p> */}
-    <input className="signup_email_box" placeholder="Email" type="email" name="email" onChange={(e)=>{
-      setUser({...user,email:e.target.value})
-    }}></input>
+    
     
     <input className="signup_email_box_password" placeholder="Username" type="text"  name="username"  onChange={(e)=>{
       setUser({...user,username:e.target.value})

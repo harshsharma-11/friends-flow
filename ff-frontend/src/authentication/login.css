@@ -115,7 +115,6 @@ height:3vw;
     margin-top:5px;
 }
 .no_account{
-    flex:0.2;
     text-align: center;
     margin-top: 40px;
     font-size: 1.5;
@@ -152,8 +151,8 @@ font-weight: 800;
 }
 @media only screen and (max-width: 570px) {
     .login{
-        width:90vw;
-        height:80vw;
+        width:80vw;
+        height:90vw;
     }
     .website_name{
         font-size:7vw;
@@ -162,15 +161,15 @@ font-weight: 800;
         font-size:4.5vw;
     }
     .email_box{
-        width: 40vw;
-        height:10vw;
+        width: 60vw;
+        height:9vw;
         font-size:4.3vw;
     }
     .email_box_password{
         
         font-size:4.3vw;
-        width: 40vw;
-        height:10vw;
+        width: 60vw;
+        height:9vw;
     }
     .no_account{
         font-size:4vw;
@@ -187,5 +186,7 @@ font-weight: 800;
         font-weight:500;
     }
     
-    
+    .email_login {
+        height: 50vw;
+    }
 }

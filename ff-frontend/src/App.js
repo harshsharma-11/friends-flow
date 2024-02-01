@@ -11,6 +11,12 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import CreatePost from "./timeline/posts/create-post"
 import UserProfile from "./profile/user-profile/user-profile"
+import ForgotPassEmail from "./authentication/forgotpassemail"
+import ForgotPassNewpass from "./authentication/forgotpass-newpass"
+import ForgotPassOtp from "./authentication/forgotpassotp"
+import AuthEmail from "./authentication/authemail"
+import AuthOtp from "./authentication/auth-otp"
+
 function App() {
 
   //hide navbar from login and signup page
@@ -28,8 +34,13 @@ function App() {
 
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/signup" element={<Signup />} />
+      <Route path="/signup" element={<AuthEmail />} />
+      <Route path="/signup-details/:email" element={<Signup />} />
+      <Route path="/signup-otp/:email" element={<AuthOtp />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/forgot-pass-email" element={<ForgotPassEmail />} />
+      <Route path="/forgot-pass-newpass/:email" element={<ForgotPassNewpass />} />
+      <Route path="/forgot-pass-otp/:email" element={<ForgotPassOtp />} />
       <Route path="/profile" element={<Profile/>}/>
       <Route path="/create-post" element={<CreatePost/>}/>
       <Route path="/user-profile/:userId" element={<UserProfile/>}/>

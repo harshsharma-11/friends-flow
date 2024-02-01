@@ -147,7 +147,9 @@ console.log('google auht');
       setUser({...user,password:e.target.value})
     }}></input>
 <button  type="submit" onClick={postData} className="email_next_button">Log In</button>
-<button className="forgot_password_button">Forgot password?</button>
+<button onClick={()=>{
+  navigate('/forgot-pass-email')
+}}className="forgot_password_button">Forgot password?</button>
 
 </div>
 
