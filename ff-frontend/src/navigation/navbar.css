@@ -58,7 +58,7 @@ flex-direction:column;
 .home_icon img ,.create-post_icon img ,.menu_icon img ,.search_icon img ,.message_icon img ,.setting_icon img{
     height:5vw;
 width:5vw;
-margin-right:24px;
+margin-right:1vw;
 margin-left: 3px;
 margin-top: 5px;
 padding-left:10px;
@@ -113,5 +113,7 @@ padding-left:10px;
         .navbar-left{
             width:40%;
         }
-    
+        .nav-icon-name{
+            font-size:2.8vw;
+            }
   }
