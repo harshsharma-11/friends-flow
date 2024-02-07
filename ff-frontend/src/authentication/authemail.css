@@ -10,7 +10,7 @@
         justify-content:space-evenly;
         color:white;
         align-items: center;
-        background-color:#181919;
+        
         border-radius:1vw;
     }
     .signup-email_website_name{
@@ -33,20 +33,26 @@
         align-items: center;
     }
     .signup-email_box{
-
+border:1px white solid;
+        border-radius: 0.5vw;
+        background-color: rgba(98, 97, 95, 0.12);
+        color:white;
         padding-left:2vw;
         font-size:1.3vw;
     width:20vw;
     height:3vw;
-    border-radius: 0.5vw;
-    border: none;
     }
     .signup-email_next_button{
-        width:15vw;
+        width:10vw;
         height:2.5vw;
         border:none;
     border-radius: 0.5vw;
         font-size:1.3vw;
+        
+border:1px white solid;
+border-radius: 0.5vw;
+background-color: rgba(98, 97, 95, 0.12);
+color:white;
     }
 
 

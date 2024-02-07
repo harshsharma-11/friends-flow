@@ -2,15 +2,15 @@ html{
     background-color: black;
 }
 .login{
-    background-color:rgb(57, 70, 81);
+   
     height:35vw;
     width:35vw;
     margin: auto;
-    
+    border:1px solid white;
     display:flex;
     flex-direction:column;
     justify-content:space-around;
-    border-radius: 10px;
+    border-radius: 2vw;
     margin-top:150px;
 }
 .website_name{
@@ -42,7 +42,7 @@ color:white;
 }
 
 .no_account{
-    
+    color:white;
 }
 
 
@@ -101,7 +101,7 @@ height:3vw;
     font-size: 1.2vw;
     font-weight: 700;
     color:azure;
-    
+    border:1px white solid;
     margin-top:1vw;
 }
 .email_next_button{
