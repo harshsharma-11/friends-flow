@@ -7,7 +7,7 @@ const loginRequired = require('../middlewares/loginrequired');
 
 router.get('/suggestion', loginRequired, (req, res) => {
     
-    console.log("helllo from suggestion");
+    console.log("helllo from suggestion",req.user);
     User.find({ followers: { $nin: [req.user._id] } })
         .then(result => {
             console.log("jdhbi");
@@ -114,3 +114,5 @@ router.put('/remove-profile-pic',loginRequired,(req,res)=>{
 
 
 module.exports=router;
+
+

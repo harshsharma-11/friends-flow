@@ -32,7 +32,7 @@ app.use(express.json());
 app.use('/auth',auth);
 app.use('/post',post);
 app.use('/user',user);
-app.use('/auth/google',google_auth);
+app.use('/authentication',google_auth);
 
 ///serving the frontend
 app.use(express.static(path.join(__dirname,"./ff-frontend/build")))
@@ -48,4 +48,7 @@ res.status(500).send(err);
 app.listen(port,()=>{
 console.log("server is running at port ",port);
 })
+
+//297242735982-g4i86d8e0huimo2skn90o8v4ubstmb8v.apps.googleusercontent.com
+//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
 

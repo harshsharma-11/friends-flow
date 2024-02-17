@@ -1,98 +1,109 @@
-const express=require('express');
-const router=express.Router();
-const passport=require('passport');
-const  session=require("express-session");
+const express = require('express');
+const router = express.Router();
+const passport = require('passport');
+const session = require("express-session");
 const User = require('../models/usermodel');
-var GoogleStrategy = require('passport-google-oauth20').Strategy;
-console.log('hey');
-const jwt=require("jsonwebtoken");
-const {jwt_secret}=require('../keys');
+const cors = require('cors');
+const { google_client_Secret, google_client_ID, jwt_secret } = require("../keys");
+const GoogleStrategy = require('passport-google-oauth20').Strategy;
+const jwt = require("jsonwebtoken");
 
+let user;
 router.use(session({
-secret:'keyboard cat',
-resave:false,
-saveUninitialized:true,
-}))
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: true,
+}));
+
+router.use(cors({
+  origin: 'https://friends-flow.onrender.com/',
+  methods: 'GET,POST,DELETE,PUT',
+  credentials: true,
+}));
 
 router.use(passport.initialize());
 router.use(passport.session());
 
 passport.use(new GoogleStrategy({
-    clientID: "120016440594-v8jh27b5c1a55u9atfgdnssv3uimcde1.apps.googleusercontent.com",
-    clientSecret: "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",
-    callbackURL: "http://localhost:5000/auth/google/callback",
-    scope:["profile","email"]
-  },
+  clientID: google_client_ID,
+  clientSecret: google_client_Secret,
+  callbackURL: "/authentication/auth/google/callback",
+  scope: ["profile", "email"]
+},
 
-    async function(accessToken, refreshToken, profile, done) {
-        // Use findOne to find a user with the given googleId
-        console.log(profile._json.name);
-        console.log(accessToken);
-        const user=await User.findOne({email:profile.emails[0].value}) ;
+  async function (accessToken, refreshToken, profile, done) {
+    try {
+      // Find user by email
+       user = await User.findOne({ email: profile.emails[0].value });
+       console.log('user already existed',user);
 
-          if (user) {
-            return done(null, user);
-          } else {
-            const newUser = new User({
-              email: profile.emails[0].value,
-    username:profile._json.name,
-     profile_pic:"http://res.cloudinary.com/harshcloud11/image/upload/v1704894890/s5tetcek6tibbrm4jkbz.png",
+      if (!user) {
+        // Create a new user if not found
+        user = new User({
+          email: profile.emails[0].value,
+          username: profile._json.name,
+          profile_pic: "http://res.cloudinary.com/harshcloud11/image/upload/v1704894890/s5tetcek6tibbrm4jkbz.png",
         });
-    
-  try {
-    // Save user in the database
-    await newUser.save();
-    console.log("Success");
-//const token=jwt.sign({_id:newUser.id},jwt_secret);
+        await user.save();
+        console.log('user not already existed',user);
+      }
 
-newUser.token = jwt.sign({ userId: user.id }, 'your-secret-key', { expiresIn: '1h' });
-return done(null, newUser);
-} catch (err) {
-    console.log("Error in creating user", err);
-    return done(err,null);
-}
-
-}
-        
+      // Generate JWT token
+       token=jwt.sign({_id:user.id},jwt_secret)
+      console.log(token);
+      return done(null, { user, token });
+    } catch (error) {
+      return done(error);
     }
+  }
 ));
 
 // Serialize user into session
-passport.serializeUser(function(user, done) {
-    done(null, user.id);
+passport.serializeUser(function (user, done) {
+  done(null, user.id);
+});
+
+// Deserialize user from session
+passport.deserializeUser(function (id, done) {
+  User.findById(id, function (err, user) {
+    done(err, user);
   });
-  
-  // Deserialize user from session
-  passport.deserializeUser(function(id, done) {
-    User.findById(id, function(err, user) {
-      done(err, user);
-    });
-})
+});
 
-//router.get('/',//passport.authenticate('google', { scope: ["https://www.googleapis.com/auth/plus.login"] }));
+router.get('/auth/google',
+  passport.authenticate('google', {
+    session: false,
+    scope: ['profile', 'email'],
+    accessType: 'offline',
+    approvalPrompt: 'force'
+  })
+);
 
-  router.get('/',
-  passport.authenticate('google', { scope: ['profile', 'email'] }));
+router.get('/auth/google/callback',
+  passport.authenticate('google', {
+    failureRedirect: '/login',
+    session: false
+  }),
+  (req, res) => {
+    const payload = {
+      id: req.user.id
+    };
 
-router.get('/callback', 
-  passport.authenticate('google', { failureRedirect: 'http://localhost:8070/login' ,
-  successRedirect:"http://localhost:8070",
-  function (req, res) {
-    // Successful authentication, include the token in the response
-    res.json({ token: req.user.token, user: req.user });
+    // TODO find another way to send the token to frontend
+   
+   
+    
+    
+    const userJson = JSON.stringify(user);
+    const userParam = encodeURIComponent(userJson);
+    console.log(userJson,req.user,user,userParam);
+
+    // Redirect with token and user parameters
+    res.redirect(`/auth/success?token=${req.user.token}&user=${userJson}`);
   }
-}),
-//   function(req, res) {
-//     // Successful authentication, redirect home.
-//     res.redirect('http://localhost:8070');
-//   });
+);
 
-//   function(req, res) {
-//     // Successful authentication, send token in the response body
-//     const token=jwt.sign({_id:req.user.id},jwt_secret);
-//      // Replace with your token generation logic
-//     return res.json({ token });
-  //}
+module.exports = router;
 
-  );
-  module.exports=router;
+
+

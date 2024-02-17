@@ -16,6 +16,7 @@ import ForgotPassNewpass from "./authentication/forgotpass-newpass"
 import ForgotPassOtp from "./authentication/forgotpassotp"
 import AuthEmail from "./authentication/authemail"
 import AuthOtp from "./authentication/auth-otp"
+import Success_google_auth from "./authentication/success_google_auth"
 
 function App() {
 
@@ -35,6 +36,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/signup" element={<AuthEmail />} />
+      <Route path="/auth/success" element={<Success_google_auth/>} />
       <Route path="/signup-details/:email" element={<Signup />} />
       <Route path="/signup-otp/:email" element={<AuthOtp />} />
       <Route path="/login" element={<Login />} />

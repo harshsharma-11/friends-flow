@@ -3,7 +3,7 @@ html{
 }
 .login{
    
-    height:35vw;
+    height:40vw;
     width:35vw;
     margin: auto;
     border:1px solid white;
@@ -11,7 +11,7 @@ html{
     flex-direction:column;
     justify-content:space-around;
     border-radius: 2vw;
-    margin-top:150px;
+    margin-top:100px;
 }
 .website_name{
     margin: auto;
@@ -28,7 +28,7 @@ color:white;
     font-size:2.1vw;
 }
 .login_other_methods{
-    
+    height:5vw;
     display:flex;
     flex-direction:column;
     justify-content:space-around;
@@ -43,15 +43,19 @@ color:white;
 
 .no_account{
     color:white;
+    margin-top:4vw;
 }
 
 
 .google_login{
-width:340px;
-height:40px;
+    width:25vw;
+    height:2.5vw;
 margin:auto;
 border: none;
-border-radius:20px;
+border-radius:2vw;
+color:black;
+font-weight:500;
+font-size: 1.5vw;
 }
  .facebook_login{
     width:340px;
@@ -116,23 +120,23 @@ height:3vw;
 }
 .no_account{
     text-align: center;
-    margin-top: 40px;
+ 
     font-size: 1.5;
     margin-bottom:30px;
     cursor:pointer;
 }
 
 .login_other_methods img{
-    height:30px;
-    width:30px;
+    height:2vw;
+    width:2vw;
 }
 .login_other_methods span{
 position:relative;
 top:-10px;
 color:rgb(54, 53, 53);
-
+font-size:1.3vw;
 margin-right: 10px;
-font-weight: 800;
+font-weight: 600;
 }
 
 
@@ -140,7 +144,7 @@ font-weight: 800;
 @media only screen and (max-width: 900px) {
     .login{
         width:50vw;
-        height:50vw;
+        height:55vw;
     }
     .website_name{
         font-size:5vw;
@@ -148,11 +152,28 @@ font-weight: 800;
     .login_title{
         font-size:3.5vw;
     }
+    .google_login{
+        width:30vw;
+        height:4vw;
+    }
+    
+.login_other_methods img{
+    height:3.4vw;
+    width:3.4vw;
+}
+.login_other_methods span{
+position:relative;
+top:-10px;
+color:rgb(54, 53, 53);
+font-size:1.5vw;
+margin-right: 10px;
+font-weight: 600;
+}
 }
 @media only screen and (max-width: 570px) {
     .login{
         width:80vw;
-        height:90vw;
+        height:98vw;
     }
     .website_name{
         font-size:7vw;
@@ -175,6 +196,7 @@ font-weight: 800;
         font-size:4vw;
     }
     .email_next_button{
+        
         width:25vw;
         height:7vw;
         font-size:3.5vw;
@@ -185,8 +207,28 @@ font-weight: 800;
         font-size:3.1vw;
         font-weight:500;
     }
+    .google_login{
+        width:50vw;
+        margin-top:2vw;
+        height:7vw;
+        font-size:3.1vw;
+        font-weight:500;
+    }
     
     .email_login {
         height: 50vw;
     }
+       
+.login_other_methods img{
+    height:5.4vw;
+    width:5.4vw;
+}
+.login_other_methods span{
+position:relative;
+top:-5px;
+color:rgb(54, 53, 53);
+font-size:3vw;
+margin-right: 10px;
+font-weight: 600;
+}
 }

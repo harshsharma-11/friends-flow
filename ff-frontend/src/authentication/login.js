@@ -93,37 +93,43 @@ const postData = () => {
 };
 
 
-
+// 
+// fetch('/authentication/auth/google', {
+//   method: "get",
+// // })
 const handleGoogleAuth=()=>{
-console.log('google auht');
-  fetch('/auth/google')
-  .then(res => res.json())  // Parse the JSON response
-  .then(data => {
-    console.log(data);  // Log the parsed data
-    if(data.error){
-      notifyError(data.error);
-      }
-      else {
-        if(data.message){
-      notifyWarning(data.message);
-        }
-        else{
+console.log('google auth');
+window.open('/authentication/auth/google','_self');
+//   .then(res => res.json())  // Parse the JSON response
+//   .then(data => {
+//     console.log(data);  // Log the parsed data
+//     if(data.error){
+//       notifyError(data.error);
+//       }
+//       else {
+//         if(data.message){
+//       notifyWarning(data.message);
+//         }
+//         else{
           
-    localStorage.setItem('jwt',data.token);
-    localStorage.setItem('user',JSON.stringify(data.user));
+//     localStorage.setItem('jwt',data.token);
+//     localStorage.setItem('user',JSON.stringify(data.user));
     
     
-          navigate('/');
-          console.log(data);
-          notifySuccess("Logged In successfully");
-        }
-      }
-  })
-  .catch(error => {
-    console.error('Error:', error);
-  });
+//           navigate('/');
+//           console.log(data);
+//           notifySuccess("Logged In successfully");
+//         }
+//       }
+//   })
+//   .catch(error => {
+//     console.error('Error:', error);
+//   });
+
+// }
 
 }
+
 
 
   return (
@@ -133,7 +139,7 @@ console.log('google auht');
 <div className="login_title">Sign in to FriendsFlow</div>
 
 <div className="login_other_methods">
-{/* <button className="google_login" onClick={handleGoogleAuth}><img alt="google" src="https://cdn-icons-png.flaticon.com/128/281/281764.png"></img><span> Sign in with Google</span></button> */}
+<button className="google_login" onClick={handleGoogleAuth}><img alt="google" src="https://cdn-icons-png.flaticon.com/128/281/281764.png"></img><span> Sign in with Google</span></button>
 {/* <button className="facebook_login"><img src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png" alt="facebook"></img><span> Sign in with Facebook</span></button> */}
 </div>
 
