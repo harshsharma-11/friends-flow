@@ -6,8 +6,17 @@
 
 .homepage__timeline{
 width:100%;
-margin-top:15vw;
+margin-top:8vw;
 display:flex;
 justify-content:center;
 }
 
+
+@media only screen and (max-width: 500px) {
+    .homepage__timeline{
+        
+        margin-top:15vw;
+        
+        }
+    
+    }
