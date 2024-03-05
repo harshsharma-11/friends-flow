@@ -2,9 +2,12 @@ import React from 'react'
 import { useState } from 'react'
 import {toast} from "react-toastify"
 import { useNavigate } from 'react-router-dom'
-
+import friends from '../assets/friend.jpg'
 import { useEffect } from 'react';
-import "./forgot.css"
+
+import './login.css'
+import './authemail.css'
+import './forgot.css'
 function ForgotPassEmail() {
 
   
@@ -74,18 +77,29 @@ const postData = () => {
 
 
   return (
-    <div  className="forgot-password-box">
+    
+    <div  className="login auth-email forgot">
+          <div className="login-left"><img src={friends}></img></div>
 
-        <div className="forgot-website_name">Forgot Password</div>
+          <div className="login-right">
+        <div className="website_name">FriendsFlow</div>
 
-    <input className="forgot-email_box" placeholder="Enter Email" type="email" name="email" onChange={(e)=>{
+        <div className="login_title ">Forgot Password</div>
+        <div className="signup-email_signup">
+
+    <input className="signup-email_box" placeholder="Enter Email" type="email" name="email" onChange={(e)=>{
       setEmail(e.target.value)
     }}></input>
     
     
-<button  type="submit" onClick={postData} className="forgot-email_next_button">Send Otp</button>
+<button  type="submit" onClick={postData} className="signup-email_next_button">Send Otp</button>
         
     </div>
+    </div>
+</div>
+
+        
+  
   )
 }
 

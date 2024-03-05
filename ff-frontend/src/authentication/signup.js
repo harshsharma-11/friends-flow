@@ -1,7 +1,10 @@
 import React from 'react'
 import { useState } from 'react';
 import { toast } from 'react-toastify';
+import "./login.css"
+
 import "./signup.css"
+import friends from '../assets/friend.jpg'
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
@@ -84,27 +87,31 @@ notifyWarning(data.message);
 };
 
   return (
-    <div  className="signup">
+    
+    <div  className="login signup">
+      <div className="login-left"><img src={friends}></img></div>
+    <div  className="login-right">
 
-        <div className="signup_website_name">FriendsFlow</div>
-<div className="signup_title">Sign up to FriendsFlow</div>
+        <div className="website_name">FriendsFlow</div>
+<div className="login_title">Sign up to FriendsFlow</div>
 
 
-<div className="email_signup">
+<div className="email_login">
     
     
-    <input className="signup_email_box_password" placeholder="Username" type="text"  name="username"  onChange={(e)=>{
+    <input className="email_box signup_email-box" placeholder="Username" type="text"  name="username"  onChange={(e)=>{
       setUser({...user,username:e.target.value})
     }}></input>
-    <input className="email_box_confirm_password" placeholder=" Password" type="password" name="password" onChange={(e)=>{
+    <input className="email_box signup_email-box" placeholder=" Password" type="password" name="password" onChange={(e)=>{
       setUser({...user,password:e.target.value})
     }}></input>
-<button type="submit" onClick={postData}className="signup_email_next_button">SignUp</button>
+<button type="submit" onClick={postData}className="email_next_button">SignUp</button>
 
 </div>
 
 <div onClick={handlelogin} className="no_account">Have an account already ? Login</div>
         
+    </div>
     </div>
   )
 }

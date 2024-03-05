@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import {toast} from "react-toastify"
 import { useNavigate } from 'react-router-dom'
-
+import friends from '../assets/friend.jpg'
 import { useEffect } from 'react';
 import "./login.css"
 function Login() {
@@ -100,33 +100,7 @@ const postData = () => {
 const handleGoogleAuth=()=>{
 console.log('google auth');
 window.open('/authentication/auth/google','_self');
-//   .then(res => res.json())  // Parse the JSON response
-//   .then(data => {
-//     console.log(data);  // Log the parsed data
-//     if(data.error){
-//       notifyError(data.error);
-//       }
-//       else {
-//         if(data.message){
-//       notifyWarning(data.message);
-//         }
-//         else{
-          
-//     localStorage.setItem('jwt',data.token);
-//     localStorage.setItem('user',JSON.stringify(data.user));
-    
-    
-//           navigate('/');
-//           console.log(data);
-//           notifySuccess("Logged In successfully");
-//         }
-//       }
-//   })
-//   .catch(error => {
-//     console.error('Error:', error);
-//   });
 
-// }
 
 }
 
@@ -134,7 +108,9 @@ window.open('/authentication/auth/google','_self');
 
   return (
     <div  className="login">
+      <div className="login-left"><img src={friends}></img></div>
 
+<div className="login-right">
         <div className="website_name">FriendsFlow</div>
 <div className="login_title">Sign in to FriendsFlow</div>
 
@@ -161,6 +137,7 @@ window.open('/authentication/auth/google','_self');
 
 <div onClick={handle_signup} className="no_account">Don't have an Account? Sign up</div>
         
+    </div>
     </div>
   )
 }

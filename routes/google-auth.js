@@ -16,7 +16,7 @@ router.use(session({
 }));
 
 router.use(cors({
-  origin: 'https://friends-flow.onrender.com/',
+  origin: 'http://friends-flow.onrender.com',
   methods: 'GET,POST,DELETE,PUT',
   credentials: true,
 }));
@@ -27,7 +27,8 @@ router.use(passport.session());
 passport.use(new GoogleStrategy({
   clientID: google_client_ID,
   clientSecret: google_client_Secret,
-  callbackURL: "/authentication/auth/google/callback",
+  callbackURL: "http://friends-flow.onrender.com/authentication/auth/google/callback",
+  
   scope: ["profile", "email"]
 },
 

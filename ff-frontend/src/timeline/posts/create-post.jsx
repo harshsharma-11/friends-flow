@@ -80,6 +80,7 @@ body:JSON.stringify({
   }
 
   return (
+    <div className="box">
     <div className="create-post-container">
         <div className="create-post-head">
 <div className="create-post-heading">Create New Post</div>
@@ -105,6 +106,7 @@ body:JSON.stringify({
         </div>
         </div>
         
+    </div>
     </div>
   )
 }

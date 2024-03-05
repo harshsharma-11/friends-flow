@@ -3,8 +3,12 @@ import { useState } from 'react'
 import {toast} from "react-toastify"
 import { useNavigate } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
+import friends from '../assets/friend.jpg'
 import { useEffect } from 'react';
-import "./forgot.css"
+
+import './login.css'
+import './authemail.css'
+import './forgot.css'
 function ForgotPassNewpass() {
 
   
@@ -77,22 +81,36 @@ const postData = () => {
 
 
   return (
-    <div  className="forgot-password-box-password">
+    <div  className="login forgot-newpass">
+<div className="login-left"><img src={friends}></img></div>
 
-        <div className="website_name-password">Forgot Password</div>
+<div className="login-right">
+  
 
-    <input className="new-pass" placeholder="New Password" type="password" name="new-pass" onChange={(e)=>{
+<div className="website_name">FriendsFlow</div>
+
+<div className="login_title ">Forgot Password</div>
+
+
+<div className="signup-email_signup forgot-signup-box ">
+
+    <input className="signup-email_box" placeholder="New Password" type="password" name="new-pass" onChange={(e)=>{
       setNewpass(e.target.value)
     }}></input>
     
-    <input className="confirm-pass" placeholder="Confirm Password" type="text" name="confirm-pass" onChange={(e)=>{
+    <input className="signup-email_box" placeholder="Confirm Password" type="text" name="confirm-pass" onChange={(e)=>{
       setConfirmpass(e.target.value)
     }}></input>
     
     
-<button  type="submit" onClick={postData} className="email_next_btn">Create Password</button>
+<button  type="submit" onClick={postData} className="signup-email_next_button">Create Password</button>
         
     </div>
+</div>
+
+
+</div>
+
   )
 }
 

@@ -4,9 +4,12 @@ import {toast} from "react-toastify"
 import { useNavigate } from 'react-router-dom'
 
 import { useParams } from 'react-router-dom'
+import friends from '../assets/friend.jpg'
 import { useEffect } from 'react';
 
-import "./forgot.css"
+import './login.css'
+import './authemail.css'
+import './forgot.css'
 function ForgotPassOtp() {
 
   const {email}=useParams();
@@ -65,19 +68,24 @@ const postData = () => {
 
 
   return (
-    <div  className="forgot-password-box">
+    <div  className="login auth-email forgot">
+      <div className="login-left"><img src={friends}></img></div>
+      <div className="login-right">
 
-        <div className="forgot-website_name">FriendsFlow</div>
-
-    <input className="forgot-email_box" placeholder="Enter Otp" type="number" name="otp" onChange={(e)=>{
+      <div className="website_name">FriendsFlow</div>
+      <div className="login_title ">Forgot Password</div>
+      <div className="signup-email_signup">
+    <input className="signup-email_box" placeholder="Enter Otp" type="number" name="otp" onChange={(e)=>{
       setOtp(e.target.value)
     }}></input>
     
     
     
-<button  type="submit" onClick={postData} className="forgot-email_next_button">Submit Otp</button>
-        
+<button  type="submit" onClick={postData} className="signup-email_next_button">Submit Otp</button>
+        </div>
     </div>
+
+</div>
   )
 }
 

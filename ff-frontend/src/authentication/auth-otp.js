@@ -2,6 +2,8 @@ import React from 'react'
 import { useState } from 'react';
 import { toast } from 'react-toastify';
 import "./authemail.css"
+import "./login.css"
+import friends from '../assets/friend.jpg'
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
@@ -66,10 +68,13 @@ const postData = () => {
   
   
   return (
-    <div  className="signup-email">
+    <div  className="login auth-otp">
+      <div className="login-left"><img src={friends}></img></div>
 
-        <div className="signup-email_website_name">FriendsFlow</div>
-<div className="signup-email_title">Sign up to FriendsFlow</div>
+<div className="login-right">
+
+        <div className="website_name">FriendsFlow</div>
+<div className="login_title">Sign up to FriendsFlow</div>
 <div className="signup-email_signup">
     <input className="signup-email_box" placeholder="Enter Otp" type="number" name="otp" onChange={(e)=>{
       setOtp(e.target.value)
@@ -81,7 +86,7 @@ const postData = () => {
 </div>
 
 <div onClick={handlelogin} className="no_account">Have an account already ? Login</div>
-        
+</div>
     </div>
   )
 }

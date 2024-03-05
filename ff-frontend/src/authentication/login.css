@@ -1,31 +1,51 @@
 html{
-    background-color: black;
+    background-color:#000000;
 }
 .login{
    
-    height:40vw;
-    width:35vw;
+display:flex;
+flex-direction:row;
+    height:30vw;
+    width:55vw;
     margin: auto;
-    border:1px solid white;
+   
+    overflow: hidden;
+    border-radius: 1vw;
+    margin-top:120px;
+}
+.login-left{
+height:100%;
+width:40%;
+display:flex;
+justify-content:center;
+align-items: center;
+background:#f6f6f6;
+}
+.login-left img{
+    width:100%;
+    height:60%;
+}
+.login-right{
+    width:60%;
+    height:100%;
     display:flex;
     flex-direction:column;
     justify-content:space-around;
-    border-radius: 2vw;
-    margin-top:100px;
+    background:#515050;
 }
 .website_name{
     margin: auto;
-    margin-bottom:2vw;
+    margin-bottom:1vw;
 
-font-size:3.2vw;
+    margin-top:1vw;
+font-size:2.2vw;
 color:white;
 }
-.login_title{
-    
+.login_title{ 
     margin: auto;
     color:white;
-
-    font-size:2.1vw;
+margin-bottom:1vw;
+    font-size:1.5vw;
 }
 .login_other_methods{
     height:5vw;
@@ -43,19 +63,19 @@ color:white;
 
 .no_account{
     color:white;
-    margin-top:4vw;
+    margin-top:1vw;
 }
 
 
 .google_login{
-    width:25vw;
+    width:20vw;
     height:2.5vw;
 margin:auto;
 border: none;
-border-radius:2vw;
+border-radius:0.4vw;
 color:black;
 font-weight:500;
-font-size: 1.5vw;
+font-size: 1.1vw;
 }
  .facebook_login{
     width:340px;
@@ -65,22 +85,25 @@ border: none;
 border-radius:20px;
  }
  .email_box{
-    width:22vw;
+    width:18vw;
     
-    height:4vw;
+    height:3vw;
     margin:auto;  
     text-align: center;
     background-color: rgba(98, 97, 95, 0.12);
     border: 0.5px solid white;
     border-radius:7px;
     color:azure;
-    font-size: 1.5vw;
+    font-size: 1.1vw;
     font-weight:500;
 
  }
+ .email_box::placeholder,.email_box_password::placeholder {
+   color:#fcfcfe;
+  }
  .email_box_password{
-    width:22vw;
-    height:4vw;
+    width:18vw;
+    height:3vw;
     
     margin:auto;  
     text-align: center;
@@ -89,39 +112,39 @@ border-radius:20px;
     border-radius:7px;
     color:azure;
     
-font-size: 1.5vw;
+font-size: 1.1vw;
     margin-top:10px;
 
  }
  
 .forgot_password_button{
-    width:15vw;
-height:3vw;
+    width:10vw;
+height:2.2vw;
     border-radius:20px;
     margin:auto;  
     border: none;
     border-radius:20px;
     background-color: rgb(12, 11, 11);
-    font-size: 1.2vw;
+    font-size: 0.8vw;
     font-weight: 700;
     color:azure;
     border:1px white solid;
     margin-top:1vw;
 }
 .email_next_button{
-    width:10vw;
-    height:3vw;
+    width:8vw;
+    height:2.5vw;
     margin:auto;  
     border: none;
-    border-radius:1.2vw;
-    font-size: 1.2vw;
+    border-radius:0.6vw;
+    font-size: 1vw;
     font-weight: 700;
     margin-top:1vw;
 }
 .no_account{
     text-align: center;
  
-    font-size: 1.5;
+    font-size: 1vw;
     margin-bottom:30px;
     cursor:pointer;
 }
@@ -134,7 +157,7 @@ height:3vw;
 position:relative;
 top:-10px;
 color:rgb(54, 53, 53);
-font-size:1.3vw;
+font-size:1vw;
 margin-right: 10px;
 font-weight: 600;
 }
@@ -170,10 +193,35 @@ margin-right: 10px;
 font-weight: 600;
 }
 }
-@media only screen and (max-width: 570px) {
-    .login{
-        width:80vw;
-        height:98vw;
+@media only screen and (max-width: 480px) {
+    .login {
+        flex-direction:column;
+        width: 86vw;
+        height: 160vw;
+        margin-top:18vw;
+    }
+    .login-left {
+        height: 40%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f6f6f6;
+    }
+    .login-right {
+        width: 100%;
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background: #515050;
+    }
+    .login-left img {
+        width: 80%;
+        height: 80%;
+    }
+    .login_other_methods {
+        height: 20vw;
     }
     .website_name{
         font-size:7vw;
@@ -181,19 +229,13 @@ font-weight: 600;
     .login_title{
         font-size:4.5vw;
     }
-    .email_box{
-        width: 60vw;
-        height:9vw;
-        font-size:4.3vw;
-    }
-    .email_box_password{
-        
-        font-size:4.3vw;
-        width: 60vw;
-        height:9vw;
+    .email_box,.email_box_password {
+        width: 70%;
+        height: 9vw;
+        font-size: 3.3vw;
     }
     .no_account{
-        font-size:4vw;
+        font-size:3.4vw;
     }
     .email_next_button{
         
@@ -208,9 +250,9 @@ font-weight: 600;
         font-weight:500;
     }
     .google_login{
-        width:50vw;
-        margin-top:2vw;
-        height:7vw;
+        width: 70%;
+        margin-top: 2vw;
+        height: 11vw;
         font-size:3.1vw;
         font-weight:500;
     }
@@ -231,4 +273,7 @@ font-size:3vw;
 margin-right: 10px;
 font-weight: 600;
 }
+
+
+
 }

@@ -1,7 +1,7 @@
 .homepage{
     display:flex;
     flex-direction:row;
-    background-color: #090101;
+    background-color: #000000;
 }
 
 .homepage__timeline{

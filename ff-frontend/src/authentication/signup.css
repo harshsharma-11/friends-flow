@@ -1,138 +1,13 @@
 .signup{
     
-    height:30vw;
-    width:30vw;
-    margin: auto;
-    margin-top:50px;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-around;
-    border-radius: 2vw;
-    margin-top:150px;
-    
-border:1px white solid;
-border-radius: 1.2vw;
-background-color: rgba(98, 97, 95, 0.12);
-color:white;
+    height:27vw;
+    width:50vw;
+   
 }
-.signup_website_name{
-    margin: auto;
-    font-size:3vw;
-    color:aliceblue;
-    }
-    .signup_title{
-        
-        margin: auto;
-    color:white;
-        font-size:2vw;
-    }
-    .signup_other_methods{
-        
-        display:flex;
-        flex-direction:column;
-        justify-content:space-around;
-    }
-    .email_signup{
-        display:flex;
-        flex-direction:column;
-        text-align: center;
-        justify-content:space-around;
-    }
-    
-    .no_account{
-        flex:0.05;
-    }
-    
-    
-    .google_login{
-    width:340px;
-    height:40px;
-    margin:auto;
-    border: none;
-    border-radius:20px;
-    }
-     .facebook_login{
-        width:340px;
-    height:40px;
-    margin:auto;
-    border: none;
-    border-radius:20px;
-     }
-     .signup_email_box,.signup_email_box_password{
-        width:22vw;
-    height:4vw;
-        margin:auto; 
-        margin-top:2vw; 
-        text-align: center;
-        background-color: rgba(98, 97, 95, 0.12);
-        border: 0.5px solid white;
-        border-radius:7px;
-        color:azure;
-        font-size: 20px;
-    
-     }
-     .email_box_confirm_password{
-        width:22vw;
-        height:4vw;
-        margin:auto;  
-        text-align: center;
-        background-color: rgba(98, 97, 95, 0.12);
-        border: 0.5px solid white;
-        border-radius:7px;
-        color:azure;
-        
-    font-size: 1.5vw;
-        margin-top:10px;
-        margin-bottom:10px;
-    
-     }
+    .signup_email-box{
+        margin-bottom:2vw;
+    } 
      
-     
-     
-     
-     
-    .forgot_password_button{
-        width:22vw;
-        height:4vw;
-        border-radius:20px;
-        margin:auto;  
-        border: none;
-        border-radius:20px;
-        background-color: rgb(12, 11, 11);
-        font-size: 15px;
-        
-        color:azure;
-    }
-    .signup_email_next_button{
-        width:18vw;;
-    height:3vw;
-        margin:auto;  
-        border: none;
-        border-radius:20px;
-        font-size: 15px;
-        font-weight: 700;
-    }
-    .no_account{
-       
-        text-align: center;
-        margin-top: 40px;
-        font-size: 1.5vw;
-        cursor:pointer;
-    }
-    
-    .signup_other_methods img{
-        height:30px;
-        width:30px;
-    }
-    .signup_other_methods span{
-    position:relative;
-    top:-10px;
-    color:rgb(54, 53, 53);
-    
-    margin-right: 10px;
-    font-weight: 800;
-    }
-
     
     @media only screen and (max-width: 1200px) {
 .signup_website_name{
@@ -174,10 +49,10 @@ color:white;
         
     }
 
-    @media only screen and (max-width: 570px) {
+    @media only screen and (max-width: 480px) {
         .signup{
             width:90vw;
-            height:105vw;
+            height:115vw;
         }
         .signup_website_name{
             font-size:9vw;

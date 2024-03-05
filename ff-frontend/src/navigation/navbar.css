@@ -5,13 +5,14 @@
     height:6vw;
 border-right: 2px rgb(143, 138, 138) solid;
 width:100%;
-background-color: rgb(232, 232, 228);
+background-color: rgb(255 255 255);
 display:flex;
-justify-content:space-evenly;
+justify-content:space-between;
 padding-top:1px;
 padding-bottom:2px;
 z-index:5;
 
+box-shadow: 2px 2px 5px 3px #837f7f;
 
 
 }
@@ -24,14 +25,22 @@ z-index:5;
     height:100%;
 }
 .navbar-left{
-    width:40%;
+    width:25%;
     display:flex;
 justify-content:space-evenly;
 }
 .navbar-right{
     width:50%;
+    padding-top:1vw;
     display:flex;
 justify-content:space-evenly;
+}
+.icon-name{
+   
+   
+font-size:1.1vw;
+font-family:Georgia, 'Times New Roman', Times, serif;
+font-weight:500;
 }
 .nav-icon-name{
 font-size:1.5vw;
@@ -43,7 +52,7 @@ padding-top:1vw;
 height:3vw;
 margin-top:1vw;
 border-radius:1vw;
-box-shadow: 2px 4px 2px 2px #2e2d2d;
+box-shadow: 2px 4px 2px 2px #b8a3a3;
 }
 .create-icon{
 
@@ -53,41 +62,63 @@ box-shadow: 2px 4px 2px 2px #2e2d2d;
 
     background-color: rgb(240, 146, 14);
 }
-.login-name{
-
-    background-color: rgb(211, 190, 27);
+.login-name,.signupp-name,.home-name,.create-name,.profilee-name{
+     opacity:0;
+padding:0.3vw;
+ border-radius:0.2vw;
+ margin-top:1vw;
+padding-left: 1.3vw;
+padding-right: 1.3vw;
+   background-color: #837f7f;
 }
-.signup-name{
 
-    background-color: rgb(36, 110, 190);
-}
 .Navbar h1{
     cursor:pointer;
-    font-size:3.5vw;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: 900;
+    font-size:2.5vw;
+    font-family:cursive;
+    font-weight: 700;
 }
 .home_icon,.create-post_icon,.menu_icon,.search_icon,.message_icon,.setting_icon{
 cursor:pointer;
-height:70px;
-
-border-radius:7px;
+width:8vw;
 display:flex;
 flex-direction:column;
-
+height:4.2vw;
+align-items: center;
 
 
 }
 .home_icon img ,.create-post_icon img ,.menu_icon img ,.search_icon img ,.message_icon img ,.setting_icon img{
-    height:5vw;
-width:5vw;
+    height:3.5vw;
+width:3.5vw;
 margin-right:1vw;
 margin-left: 3px;
-margin-top: 5px;
 padding-left:10px;
 }
+.login_icon:hover + .icon-name .login-name {
+    opacity: 1;
+  }
+ 
+  .home_icon:hover + .icon-name .home-name {
+    opacity: 1;
+  }
+ 
+  .setting_icon:hover + .icon-name .profilee-name {
+    opacity: 1;
+  }
+  .create-post_icon:hover + .icon-name .create-name {
+    opacity: 1;
+  }
+  
+  .signup_icon:hover + .icon-name .signupp-name {
+    opacity: 1;
+  }
+  
 
 
+.active{
+    border-bottom: rgb(15, 130, 224) solid 4px;
+}
 
 
 @media only screen and (max-width: 700px) {
@@ -126,15 +157,18 @@ padding-left:10px;
             font-size:4.5vw;
             
         }
+        .icon-name{
+            display :none;
+        }
         .nav-img{
-            width:10vw ;
-            height:10vw;
+            width:15vw ;
+            height:12vw;
         }
         .navbar-right{
             width:60%;
         }
         .navbar-left{
-            width:40%;
+            width:50%;
         }
         .nav-icon-name{
             width:16vw;
@@ -142,4 +176,27 @@ padding-left:10px;
             font-size:3vw;
             padding-top:2vw;
             }
+            .login-name,.signupp-name,.home-name,.create-name,.profilee-name{
+                font-size:3.5vw;
+                font-weight:500;
+                padding:0 1vw 0 1vw;
+                color:#555454;
+                background-color: #d6d6d6;
+           }
+           .home_icon,.create-post_icon,.menu_icon,.search_icon,.message_icon,.setting_icon{
+           display:flex;
+           flex-direction:row;
+
+            width:14vw;
+            height:9.2vw;
+            
+            
+            }
   }
+
+.kode-mono-div {
+  font-family: "Kode Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
