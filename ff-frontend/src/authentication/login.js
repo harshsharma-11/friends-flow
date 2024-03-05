@@ -111,7 +111,7 @@ window.open('/authentication/auth/google','_self');
       <div className="login-left"><img src={friends}></img></div>
 
 <div className="login-right">
-        <div className="website_name">FriendsFlow</div>
+        {/* <div className="website_name">FriendsFlow</div> */}
 <div className="login_title">Sign in to FriendsFlow</div>
 
 <div className="login_other_methods">
