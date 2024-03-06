@@ -13,7 +13,7 @@
     margin-bottom: 30px;
     color:black;
     font-weight: 800;
-    
+    margin-left:8vw;
     border-radius:10px;
     padding :10px;
     background-color: #ffffff;
@@ -262,7 +262,7 @@ cursor:pointer;
     }
     .post{
         width:80vw;
-       
+       margin-left:2vw;
        
         
     }
